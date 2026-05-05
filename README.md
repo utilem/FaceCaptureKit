@@ -73,6 +73,28 @@ model.reset()
 
 During a countdown, `model.countdown` contains the current value (`Int?`) and can be observed to build custom overlays. `FaceCaptureKit` renders the countdown automatically with a scale/fade animation. If the face moves or an analysis error occurs, the countdown is cancelled and restarts on the next stable frame.
 
+### Custom result presentation
+
+By default `FaceCaptureView` presents a sheet with the built-in `VerificationResultView` when verification completes. Pass a `result` closure to replace that with any view you like — the closure receives the terminal `VerificationStatus` and a `retry` callback that resets the model.
+
+```swift
+FaceCaptureView(model: model) { status, retry in
+    MyResultView(status: status, onRetry: retry)
+}
+```
+
+The returned view is shown as a full-screen overlay over the camera, so you can use any presentation style inside it (inline layout, `.sheet`, `.fullScreenCover`, navigation, etc.).
+
+The public sub-components of the built-in result UI are available for reuse:
+
+| Type | Description |
+|---|---|
+| `VerificationResultView` | Complete default result view (icon + label + retry button) |
+| `VerificationResultIcon` | SF Symbol icon reflecting the verification outcome |
+| `VerificationResultLabel` | Status text, estimated age, and optional message |
+
+See `Examples/FaceCapture` for a complete example that combines the captured image with `VerificationResultIcon` and `VerificationResultLabel`.
+
 ### Custom verification service
 
 Implement `AgeVerificationService` to connect your own backend:

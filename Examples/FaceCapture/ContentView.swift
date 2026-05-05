@@ -27,9 +27,15 @@ struct ContentView: View {
 
     var body: some View {
         NavigationStack {
-            FaceCaptureView(model: faceCaptureModel)
-                .navigationTitle("Age Recognition")
-                .navigationBarTitleDisplayMode(.inline)
+            FaceCaptureView(model: faceCaptureModel) { status, retry in
+                CaptureResultView(
+                    status: status,
+                    capturedImageData: faceCaptureModel.capturedImageData,
+                    onRetry: retry
+                )
+            }
+            .navigationTitle("Age Recognition")
+            .navigationBarTitleDisplayMode(.inline)
         }
         .safeAreaInset(edge: .bottom) {
             controlPanel
@@ -75,6 +81,44 @@ struct ContentView: View {
             : .countdown(seconds: countdownSeconds)
         faceCaptureModel.stabilityMode = mode
         faceCaptureModel.reset()
+    }
+}
+
+// MARK: - Custom result view (demonstrates FaceCaptureView result: init)
+
+private struct CaptureResultView: View {
+    let status: VerificationStatus
+    let capturedImageData: Data?
+    let onRetry: () -> Void
+
+    var body: some View {
+        VStack(spacing: 24) {
+            if let data = capturedImageData, let image = UIImage(data: data) {
+                ZStack(alignment: .bottomTrailing) {
+                    Image(uiImage: image)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 150)
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 12)
+                                .stroke(.white.opacity(0.4), lineWidth: 1)
+                        )
+                        .padding(.horizontal, 32)
+
+                    VerificationResultIcon(verificationStatus: status)
+                        .padding(12)
+                }
+            }
+
+            VerificationResultLabel(verificationStatus: status)
+
+            Button("Try Again", action: onRetry)
+                .buttonStyle(.borderedProminent)
+        }
+        .padding()
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(.ultraThinMaterial)
     }
 }
 

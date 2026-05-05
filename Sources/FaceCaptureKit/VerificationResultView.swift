@@ -7,10 +7,14 @@
 
 import SwiftUI
 
-struct VerificationResultIcon: View {
-    let verificationStatus: VerificationStatus
+public struct VerificationResultIcon: View {
+    public let verificationStatus: VerificationStatus
 
-    var body: some View {
+    public init(verificationStatus: VerificationStatus) {
+        self.verificationStatus = verificationStatus
+    }
+
+    public var body: some View {
         switch verificationStatus {
         case .verified(let result):
             Image(systemName: result.isVerified ? "checkmark.seal.fill" : "xmark.seal.fill")
@@ -26,10 +30,14 @@ struct VerificationResultIcon: View {
     }
 }
 
-struct VerificationResultLabel: View {
-    let verificationStatus: VerificationStatus
-    
-    var body: some View {
+public struct VerificationResultLabel: View {
+    public let verificationStatus: VerificationStatus
+
+    public init(verificationStatus: VerificationStatus) {
+        self.verificationStatus = verificationStatus
+    }
+
+    public var body: some View {
         switch verificationStatus {
         case .verified(let result):
             VStack(spacing: 8) {
@@ -61,15 +69,20 @@ struct VerificationResultLabel: View {
     }
 }
 
-struct VerificationResultView: View {
-    let verificationStatus: VerificationStatus
-    let onRetry: () -> Void
+public struct VerificationResultView: View {
+    public let verificationStatus: VerificationStatus
+    public let onRetry: () -> Void
 
-    var body: some View {
+    public init(verificationStatus: VerificationStatus, onRetry: @escaping () -> Void) {
+        self.verificationStatus = verificationStatus
+        self.onRetry = onRetry
+    }
+
+    public var body: some View {
         VStack(spacing: 24) {
             VerificationResultIcon(verificationStatus: verificationStatus)
             VerificationResultLabel(verificationStatus: verificationStatus)
-            
+
             Button(String(localized: "Try Again", bundle: .module), action: onRetry)
                 .buttonStyle(.borderedProminent)
         }

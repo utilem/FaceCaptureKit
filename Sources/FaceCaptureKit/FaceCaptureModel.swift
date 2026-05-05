@@ -25,20 +25,20 @@ enum FaceCaptureStatus: Equatable {
     case captured
 }
 
-enum VerificationStatus {
+public enum VerificationStatus {
     case idle
     case uploading
     case verified(AgeVerificationResult)
     case failed(String)
 
-    var isTerminal: Bool {
+    public var isTerminal: Bool {
         switch self {
         case .verified, .failed: return true
         default: return false
         }
     }
 
-    var statusString: String {
+    public var statusString: String {
         switch self {
         case .verified(let result):
             return result.isVerified
@@ -75,7 +75,7 @@ private struct StabilityState {
 @MainActor
 public final class FaceCaptureModel {
     private(set) var captureStatus: FaceCaptureStatus = .idle
-    private(set) var verificationStatus: VerificationStatus = .idle
+    public private(set) var verificationStatus: VerificationStatus = .idle
     private(set) var hint: String = String(localized: "Align your face here", bundle: .module)
     private(set) var isAnalysisError: Bool = false
     public var isReadyForAnalysing: Bool = true
