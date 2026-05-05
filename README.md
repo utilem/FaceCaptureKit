@@ -105,6 +105,12 @@ public struct AgeVerificationResult: Codable, Sendable {
 
 The built-in `LiveAgeVerificationService` POSTs the captured JPEG to your endpoint and decodes a JSON response matching the same structure (`verified`, `estimatedAge`, `message`).
 
+## Examples
+
+The `Examples/FaceCapture` directory contains a ready-to-run iOS app that demonstrates `FaceCaptureKit` in action. It shows the live camera view and lets you switch between stability modes (frame count / countdown) and adjust their parameters at runtime via a control panel at the bottom of the screen.
+
+To run it, open `Examples/FaceCapture.xcodeproj` in Xcode, replace the placeholder endpoint URL in `ContentView.swift` with your backend URL, and run the app on a physical device (camera required).
+
 ## How it works
 
 1. The camera opens and Yoti analyzes each frame continuously.
