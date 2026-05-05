@@ -1,0 +1,15 @@
+{
+  "originHash" : "95413f19b6ac1934adae3ea4c511edeb59e0be22891654165ad4f5a56340bb68",
+  "pins" : [
+    {
+      "identity" : "yoti-face-capture-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/getyoti/yoti-face-capture-ios.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "17c6f979a63816cefaddf3ad7beee380bddbb4a2"
+      }
+    }
+  ],
+  "version" : 3
+}

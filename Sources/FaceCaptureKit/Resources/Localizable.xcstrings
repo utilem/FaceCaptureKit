@@ -1,0 +1,199 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%lld" : {
+
+    },
+    "Age Verified" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alter verifiziert"
+          }
+        }
+      }
+    },
+    "Align your face here" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Richte dein Gesicht hier aus"
+          }
+        }
+      }
+    },
+    "Environment too dark" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Umgebung zu dunkel"
+          }
+        }
+      }
+    },
+    "Estimated age: %lld" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geschätztes Alter: %lld"
+          }
+        }
+      }
+    },
+    "Eyes not open" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die Augen sind nicht geöffnet"
+          }
+        }
+      }
+    },
+    "Face analysis failed" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die Gesichtsanalyse ist fehlgeschlagen"
+          }
+        }
+      }
+    },
+    "Face not centered" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Das Gesicht ist nicht zentriert"
+          }
+        }
+      }
+    },
+    "Face not stable" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gesicht nicht stabil"
+          }
+        }
+      }
+    },
+    "Face not straight" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Das Gesicht ist nicht gerade"
+          }
+        }
+      }
+    },
+    "Face too big" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gesicht ist zu nah"
+          }
+        }
+      }
+    },
+    "Face too small" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gesicht ist zu weit weg."
+          }
+        }
+      }
+    },
+    "Invalid Result" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ungültiges Ergebnis"
+          }
+        }
+      }
+    },
+    "Multiple faces" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mehrere Gesichter"
+          }
+        }
+      }
+    },
+    "No face detected" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Es wurde kein Gesicht erkannt"
+          }
+        }
+      }
+    },
+    "Not Verified" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nicht verifiziert"
+          }
+        }
+      }
+    },
+    "Try Again" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erneut versuchen"
+          }
+        }
+      }
+    },
+    "Valid frame" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gültiges Bild erkannt"
+          }
+        }
+      }
+    },
+    "Verification Failed" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Überprüfung fehlgeschlagen"
+          }
+        }
+      }
+    },
+    "Verifying age…" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Altersüberprüfung…"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.2"
+}
