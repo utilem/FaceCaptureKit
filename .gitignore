@@ -12,3 +12,4 @@ DerivedData/
 Examples/.DS_Store
 *.xcuserstate
 /Examples/FaceCapture.xcodeproj/project.xcworkspace/xcuserdata/ut.xcuserdatad
+/Examples/FaceCapture.xcodeproj/project.xcworkspace
